@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <title>Usuario</title>
+    </head>
+    <body>
+        <div class="container">
+            <form th:object="${evento}"
+                  th:action="@{/save}"
+                  method="POST">
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2"for="idevento">IdEvento</label>
+                    <input type="int" th:field="*{idevento}" class="form-control form-control-sm col-md-6" placeholder="IdPersona"/>
+                </div>
+
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2"for="evento">Artistas</label>
+                    <input type="text" th:field="*{artista}" class="form-control form-control-sm col-md-6" placeholder="Artistas"/>
+                </div>
+                <div class="form-group-row">
+                    <label for=class="form-control-sm col-md-2"for="capacidad">Capacidad</label>
+                    <input type="int"th:field="*{capacidad}" class="form-control form-control-sm col-md-6" placeholder="Capacidad"/>
+                </div>
+                <div class="form-group-row">
+                    <label for=class="form-control-sm col-md-2"for="lugar">Lugar </label>
+                    <input type="text" th:field="*{lugar}" class="form-control form-control-sm col-md-6"placeholder="Lugar "/>
+
+                </div>
+                <div class="form-group-row">
+                    <label for=class="form-control-sm col-md-2"for="fecha">Fecha </label>
+                    <input type="text" th:field="*{fecha}" class="form-control form-control-sm col-md-6"placeholder="Fecha "/>
+                </div>
+                <div class="form-group-row">
+                    <label for=class="form-control-sm col-md-2"for="precio">Precio </label>
+                    <input type="text" th:field="*{precio}" class="form-control form-control-sm col-md-6"placeholder="Precio "/>
+                </div>
+                
+                
+                <button type="submit"class="btn btn-primary" value="Guardar">Submit</button>
+            </form>
+    </body>
+</html>

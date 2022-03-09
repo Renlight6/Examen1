@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <tbody>
+                    <h1 th:text="${titulo}"></h1>
+
+                    <th:block th:each="user : ${eventos}">
+                        <tr>
+                            <td th:text="${user.getIdEvento}"></td>
+                            <td th:text="${user.getArtistas}"></td>
+                            <td th:text="${user.getCapacidad}"></td>
+
+                            <td th:text="${user.getLugar}"></td>
+                            <td th:text="${user.getFecha}"></td>
+                            <td th:text="${user.getPrecio}"></td>
+                        </tr>
+                    </th:block>
+
+                </tbody>
+                </html>
